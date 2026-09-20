@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aurora Café — Cafeteria Artesanal em Recife</title>
+<meta name="description" content="Café especial, doces artesanais e um espaço acolhedor no coração do Recife. Conheça a Aurora Café." />
+<meta property="og:title" content="Aurora Café — Cafeteria Artesanal em Recife" />
+<meta property="og:description" content="Café especial, doces artesanais e um espaço acolhedor no coração do Recife." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<div class="min-h-screen bg-background text-foreground">
+  <header class="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <a href="#inicio" class="flex items-center gap-2">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-xl text-primary-foreground">☕</span>
+        <span class="font-display text-xl font-semibold tracking-tight text-foreground">Aurora Café</span>
+      </a>
+      <nav aria-label="Navegação principal" class="hidden md:block">
+        <ul class="flex items-center gap-6">
+          <li><a href="#inicio" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Início</a></li>
+          <li><a href="#sobre" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Sobre</a></li>
+          <li><a href="#cardapio" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Cardápio</a></li>
+          <li><a href="#faq" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Dúvidas</a></li>
+          <li><a href="#contato" class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Contato</a></li>
+          <li><a href="#contato" class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90">Faça seu pedido</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" type="button" class="rounded-md border border-border p-2 text-foreground md:hidden" aria-expanded="false" aria-label="Abrir menu" aria-controls="mobile-nav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+    <nav id="mobile-nav" aria-label="Navegação móvel" hidden class="border-t border-border bg-background md:hidden">
+      <ul class="flex flex-col px-4 py-2">
+        <li><a href="#inicio" class="block py-3 text-sm font-medium text-foreground">Início</a></li>
+        <li><a href="#sobre" class="block py-3 text-sm font-medium text-foreground">Sobre</a></li>
+        <li><a href="#cardapio" class="block py-3 text-sm font-medium text-foreground">Cardápio</a></li>
+        <li><a href="#faq" class="block py-3 text-sm font-medium text-foreground">Dúvidas</a></li>
+        <li><a href="#contato" class="block py-3 text-sm font-medium text-foreground">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="relative overflow-hidden">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
+        <div>
+          <p class="mb-3 inline-block rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-wider text-secondary-foreground">Cafeteria artesanal · Recife, PE</p>
+          <h1 class="font-display text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl">O café que começa o seu dia com calma</h1>
+          <p class="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">Grãos selecionados, torra semanal e receitas de família. Passa na Aurora para um espresso ou fica um pouco mais e aproveita o nosso espaço.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#cardapio" class="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90">Ver o cardápio</a>
+            <a href="#contato" class="rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-accent hover:text-accent-foreground">Falar com a gente</a>
+          </div>
+        </div>
+        <img src="assets/hero-cafe.jpg" alt="Barista preparando café com latte art no balcão da cafeteria" width="1408" height="912" class="w-full rounded-3xl border border-border object-cover shadow-lg" />
+      </div>
+    </section>
+
+    <section id="sobre" class="border-y border-border bg-secondary/40">
+      <div class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+        <h2 class="font-display text-3xl font-bold tracking-tight text-foreground">Sobre a Aurora</h2>
+        <p class="mt-3 max-w-2xl text-muted-foreground">Nascemos em 2019 numa esquina do Recife Antigo com uma máquina de espresso emprestada. Hoje somos uma equipe de oito pessoas apaixonadas por café — e continua tudo feito à mão.</p>
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <article class="rounded-2xl border border-border bg-card p-6">
+            <span class="text-3xl" aria-hidden="true">🌱</span>
+            <h3 class="mt-4 text-lg font-semibold text-foreground">Grãos sustentáveis</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Compramos direto de produtores da Alta Mogiana, com torra semanal.</p>
+          </article>
+          <article class="rounded-2xl border border-border bg-card p-6">
+            <span class="text-3xl" aria-hidden="true">🥐</span>
+            <h3 class="mt-4 text-lg font-semibold text-foreground">Feito na casa</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Pães, bolos e doces assados todos os dias na nossa cozinha.</p>
+          </article>
+          <article class="rounded-2xl border border-border bg-card p-6">
+            <span class="text-3xl" aria-hidden="true">🛋️</span>
+            <h3 class="mt-4 text-lg font-semibold text-foreground">Espaço pra ficar</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Wi-fi rápido, tomadas em toda mesa e um mezanino silencioso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cardapio" class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+      <h2 class="font-display text-3xl font-bold tracking-tight text-foreground">Cardápio</h2>
+      <p class="mt-3 text-muted-foreground">Os favoritos da casa — servidos o dia inteiro.</p>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="flex flex-col rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-md">
+          <div class="flex items-baseline justify-between gap-3">
+            <h3 class="text-lg font-semibold text-foreground">Espresso Artesanal</h3>
+            <span class="font-display text-lg font-semibold text-primary">R$ 7</span>
+          </div>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Extração precisa com grãos da Alta Mogiana.</p>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-md">
+          <div class="flex items-baseline justify-between gap-3">
+            <h3 class="text-lg font-semibold text-foreground">Cappuccino Cremoso</h3>
+            <span class="font-display text-lg font-semibold text-primary">R$ 12</span>
+          </div>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Leite vaporizado e toque de canela.</p>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-md">
+          <div class="flex items-baseline justify-between gap-3">
+            <h3 class="text-lg font-semibold text-foreground">Latte Caramelo</h3>
+            <span class="font-display text-lg font-semibold text-primary">R$ 14</span>
+          </div>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Espresso duplo com calda de caramelo da casa.</p>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-md">
+          <div class="flex items-baseline justify-between gap-3">
+            <h3 class="text-lg font-semibold text-foreground">Cold Brew 12h</h3>
+            <span class="font-display text-lg font-semibold text-primary">R$ 15</span>
+          </div>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Extração a frio por 12 horas, suave e cítrico.</p>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-md">
+          <div class="flex items-baseline justify-between gap-3">
+            <h3 class="text-lg font-semibold text-foreground">Pão de Queijo Artesanal</h3>
+            <span class="font-display text-lg font-semibold text-primary">R$ 8</span>
+          </div>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Receita mineira, direto do forno.</p>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-md">
+          <div class="flex items-baseline justify-between gap-3">
+            <h3 class="text-lg font-semibold text-foreground">Bolo de Cenoura</h3>
+            <span class="font-display text-lg font-semibold text-primary">R$ 10</span>
+          </div>
+          <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Com ganache de chocolate 70%.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="border-y border-border bg-secondary/40">
+      <div class="mx-auto max-w-3xl px-4 py-16 md:py-20">
+        <h2 class="font-display text-3xl font-bold tracking-tight text-foreground">Dúvidas frequentes</h2>
+        <div class="mt-8 space-y-3" data-faq>
+          <article class="rounded-2xl border border-border bg-card">
+            <button type="button" class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left" aria-expanded="true">
+              <span class="font-medium text-foreground">Vocês fazem encomendas para eventos?</span>
+              <span aria-hidden="true" class="shrink-0 text-xl text-muted-foreground transition-transform" style="transform:rotate(45deg)">+</span>
+            </button>
+            <p class="px-5 pb-5 text-sm leading-relaxed text-muted-foreground">Sim! Montamos kits de café e doces para aniversários, reuniões e casamentos. Fale conosco pelo formulário com pelo menos 5 dias de antecedência.</p>
+          </article>
+          <article class="rounded-2xl border border-border bg-card">
+            <button type="button" class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left" aria-expanded="false">
+              <span class="font-medium text-foreground">Há opções sem lactose ou sem glúten?</span>
+              <span aria-hidden="true" class="shrink-0 text-xl text-muted-foreground transition-transform" style="transform:rotate(0deg)">+</span>
+            </button>
+            <p hidden class="px-5 pb-5 text-sm leading-relaxed text-muted-foreground">Todos os drinks podem ser feitos com leite de aveia, amêndoa ou castanha. Também temos sempre um doce sem glúten no balcão.</p>
+          </article>
+          <article class="rounded-2xl border border-border bg-card">
+            <button type="button" class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left" aria-expanded="false">
+              <span class="font-medium text-foreground">Posso trabalhar no café? Há wi-fi?</span>
+              <span aria-hidden="true" class="shrink-0 text-xl text-muted-foreground transition-transform" style="transform:rotate(0deg)">+</span>
+            </button>
+            <p hidden class="px-5 pb-5 text-sm leading-relaxed text-muted-foreground">Claro — temos wi-fi de alta velocidade, tomadas em quase todas as mesas e um mezanino mais silencioso para quem precisa de concentração.</p>
+          </article>
+          <article class="rounded-2xl border border-border bg-card">
+            <button type="button" class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left" aria-expanded="false">
+              <span class="font-medium text-foreground">Vocês vendem os grãos para levar?</span>
+              <span aria-hidden="true" class="shrink-0 text-xl text-muted-foreground transition-transform" style="transform:rotate(0deg)">+</span>
+            </button>
+            <p hidden class="px-5 pb-5 text-sm leading-relaxed text-muted-foreground">Vendemos pacotes de 250 g e 500 g dos nossos blends, moídos na hora ou em grãos. Assinatura mensal com 10% de desconto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="mx-auto max-w-6xl px-4 py-16 md:py-20">
+      <div class="grid gap-10 md:grid-cols-2">
+        <div>
+          <h2 class="font-display text-3xl font-bold tracking-tight text-foreground">Fale com a gente</h2>
+          <p class="mt-3 text-muted-foreground">Encomendas, dúvidas ou só um oi — respondemos em até um dia útil.</p>
+          <ul class="mt-8 space-y-4 text-sm">
+            <li class="flex items-start gap-3"><span aria-hidden="true">📍</span><span class="text-foreground">Rua das Flores, 123 — Recife Antigo, Recife/PE</span></li>
+            <li class="flex items-start gap-3"><span aria-hidden="true">🕐</span><span class="text-foreground">Seg a Sex, 7h às 19h · Sáb, 8h às 20h · Dom, 8h às 14h</span></li>
+            <li class="flex items-start gap-3"><span aria-hidden="true">📞</span><span class="text-foreground">(81) 3000-0000</span></li>
+          </ul>
+        </div>
+        <form id="contato-form" novalidate class="rounded-2xl border border-border bg-card p-6 md:p-8">
+          <div class="space-y-5">
+            <div>
+              <label for="nome" class="mb-1.5 block text-sm font-medium text-foreground">Nome *</label>
+              <input id="nome" name="nome" type="text" placeholder="Seu nome completo" class="w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/40" />
+              <p hidden data-error="nome" class="mt-1 text-sm text-destructive"></p>
+            </div>
+            <div>
+              <label for="email" class="mb-1.5 block text-sm font-medium text-foreground">E-mail *</label>
+              <input id="email" name="email" type="email" placeholder="nome@exemplo.com" class="w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/40" />
+              <p hidden data-error="email" class="mt-1 text-sm text-destructive"></p>
+            </div>
+            <div>
+              <label for="telefone" class="mb-1.5 block text-sm font-medium text-foreground">Telefone (opcional)</label>
+              <input id="telefone" name="telefone" type="tel" placeholder="(81) 90000-0000" class="w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/40" />
+            </div>
+            <div>
+              <label for="mensagem" class="mb-1.5 block text-sm font-medium text-foreground">Mensagem *</label>
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?" class="w-full rounded-lg border border-input bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/40"></textarea>
+              <p hidden data-error="mensagem" class="mt-1 text-sm text-destructive"></p>
+            </div>
+            <button type="submit" class="w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90">Enviar mensagem</button>
+            <p hidden id="form-sucesso" role="status" class="rounded-lg bg-secondary px-4 py-3 text-center text-sm font-medium text-secondary-foreground">☕ Mensagem enviada! Obrigado pelo contato, responderemos em breve.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-border bg-primary text-primary-foreground">
+    <div class="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-3">
+      <div>
+        <p class="font-display text-xl font-semibold">☕ Aurora Café</p>
+        <p class="mt-3 max-w-xs text-sm opacity-80">Cafeteria artesanal no Recife Antigo. Café especial, doces da casa e um lugar pra ficar.</p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <p class="text-sm font-semibold uppercase tracking-wider opacity-80">Navegação</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="#inicio" class="opacity-80 transition-opacity hover:opacity-100">Início</a></li>
+          <li><a href="#sobre" class="opacity-80 transition-opacity hover:opacity-100">Sobre</a></li>
+          <li><a href="#cardapio" class="opacity-80 transition-opacity hover:opacity-100">Cardápio</a></li>
+          <li><a href="#faq" class="opacity-80 transition-opacity hover:opacity-100">Dúvidas</a></li>
+          <li><a href="#contato" class="opacity-80 transition-opacity hover:opacity-100">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wider opacity-80">Contato</p>
+        <ul class="mt-3 space-y-2 text-sm opacity-80">
+          <li>Rua das Flores, 123 — Recife/PE</li>
+          <li>(81) 3000-0000</li>
+          <li>ola@auroracafe.com.br</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-primary-foreground/20 py-5 text-center text-xs opacity-70">© 2026 Aurora Café — Página fictícia criada para fins de estudo.</div>
+  </footer>
+</div>
+<script src="assets/script.js"></script>
+</body>
+</html>
