@@ -1,0 +1,538 @@
+/* ============================================================
+   Aurora Café — folha de estilos
+   Organização: variáveis → base → cabeçalho/menu → seções →
+   formulário → rodapé → responsividade
+   ============================================================ */
+
+/* ---------- Variáveis de cor e fonte ---------- */
+:root {
+  --cor-fundo: #faf6ef;        /* creme claro */
+  --cor-texto: #3d2b1f;        /* marrom escuro */
+  --cor-primaria: #6f4e37;     /* marrom café */
+  --cor-primaria-escura: #553a29;
+  --cor-acento: #e0a458;       /* caramelo */
+  --cor-secundaria: #f3e9d7;   /* bege */
+  --cor-borda: #e5d8c3;
+  --cor-erro: #c0392b;
+  --cor-card: #fffdf8;
+
+  --fonte-titulo: "Fraunces", Georgia, serif;
+  --fonte-texto: "Work Sans", Arial, sans-serif;
+
+  --raio: 14px;
+  --sombra: 0 4px 16px rgba(61, 43, 31, 0.08);
+}
+
+/* ---------- Base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* rolagem suave ao clicar no menu */
+}
+
+body {
+  font-family: var(--fonte-texto);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---------- Botões ---------- */
+.botao {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.botao--primario {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+}
+
+.botao--primario:hover {
+  background-color: var(--cor-primaria-escura);
+}
+
+.botao--contorno {
+  background-color: var(--cor-card);
+  color: var(--cor-texto);
+  border-color: var(--cor-borda);
+}
+
+.botao--contorno:hover {
+  background-color: var(--cor-secundaria);
+}
+
+.botao--largo {
+  width: 100%;
+  border: none;
+}
+
+/* ---------- Cabeçalho e menu ---------- */
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(250, 246, 239, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.cabecalho__linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--cor-texto);
+}
+
+.logo__icone {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--cor-primaria);
+  font-size: 1.2rem;
+}
+
+.logo__texto {
+  font-family: var(--fonte-titulo);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.menu__lista {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.menu__lista a {
+  color: #6b5a4c;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.menu__lista a:hover {
+  color: var(--cor-texto);
+}
+
+/* Botão de hambúrguer: escondido no desktop */
+.menu-mobile__botao {
+  display: none;
+  background: none;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 0.5rem;
+  color: var(--cor-texto);
+  cursor: pointer;
+}
+
+.menu-mobile {
+  display: none;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.menu-mobile ul {
+  list-style: none;
+  padding: 0.5rem 1.25rem;
+}
+
+.menu-mobile a {
+  display: block;
+  padding: 0.75rem 0;
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.menu-mobile.aberto {
+  display: block;
+}
+
+/* ---------- Seção hero ---------- */
+.hero__grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.etiqueta {
+  display: inline-block;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero__texto {
+  color: #6b5a4c;
+  max-width: 28rem;
+}
+
+.hero__botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.hero__imagem {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: var(--sombra);
+}
+
+/* ---------- Seções genéricas ---------- */
+.secao__texto {
+  color: #6b5a4c;
+  max-width: 40rem;
+  margin-top: 0.5rem;
+}
+
+.sobre,
+.faq {
+  background-color: var(--cor-secundaria);
+  border-top: 1px solid var(--cor-borda);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.sobre, .cardapio, .faq, .contato {
+  padding: 4.5rem 0;
+}
+
+/* ---------- Grade de cartões ---------- */
+.grade {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.grade--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cartao {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra);
+  transition: transform 0.2s;
+}
+
+.cartao:hover {
+  transform: translateY(-3px);
+}
+
+.cartao__icone {
+  font-size: 1.8rem;
+}
+
+.cartao h3 {
+  font-size: 1.15rem;
+  margin: 0.75rem 0 0.35rem;
+}
+
+.cartao p {
+  color: #6b5a4c;
+  font-size: 0.92rem;
+}
+
+.cartao__linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.preco {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+/* ---------- FAQ (sanfona) ---------- */
+.faq__coluna {
+  max-width: 720px;
+}
+
+.faq__lista {
+  margin-top: 2rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq__item {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+}
+
+.faq__pergunta {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: none;
+  border: none;
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq__sinal {
+  font-size: 1.4rem;
+  color: #6b5a4c;
+  transition: transform 0.2s;
+}
+
+.faq__item.aberto .faq__sinal {
+  transform: rotate(45deg);
+}
+
+.faq__resposta {
+  display: none;           /* a resposta só aparece quando o JS adiciona a classe "aberto" */
+  padding: 0 1.25rem 1.25rem;
+  color: #6b5a4c;
+  font-size: 0.95rem;
+}
+
+.faq__item.aberto .faq__resposta {
+  display: block;
+}
+
+/* ---------- Formulário de contato ---------- */
+.contato__grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contato__lista {
+  list-style: none;
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.formulario {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 2rem;
+  box-shadow: var(--sombra);
+  display: grid;
+  gap: 1.25rem;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-texto);
+  font-size: 0.95rem;
+  color: var(--cor-texto);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 1px;
+  border-color: var(--cor-acento);
+}
+
+/* Estado de erro: borda vermelha aplicada pelo JS */
+.campo input.invalido,
+.campo textarea.invalido {
+  border-color: var(--cor-erro);
+}
+
+.campo__erro {
+  min-height: 1.2rem;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--cor-erro);
+}
+
+.formulario__sucesso {
+  background-color: var(--cor-secundaria);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+}
+
+.rodape__grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.rodape__logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.rodape__titulo {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+  margin-bottom: 0.75rem;
+}
+
+.rodape__texto {
+  opacity: 0.8;
+  font-size: 0.92rem;
+  margin-top: 0.75rem;
+  max-width: 18rem;
+}
+
+.rodape__lista {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  opacity: 0.85;
+}
+
+.rodape__lista a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.rodape__lista a:hover {
+  text-decoration: underline;
+}
+
+.rodape__base {
+  border-top: 1px solid rgba(250, 246, 239, 0.25);
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.75;
+  padding: 1.25rem;
+}
+
+/* ---------- Responsividade ---------- */
+
+/* Tablet: cardápio em 2 colunas */
+@media (max-width: 900px) {
+  .grade--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celular: tudo em 1 coluna e menu vira hambúrguer */
+@media (max-width: 768px) {
+  .menu {
+    display: none;               /* esconde o menu de links */
+  }
+
+  .menu-mobile__botao {
+    display: block;              /* mostra o hambúrguer */
+  }
+
+  .hero__grade,
+  .contato__grade {
+    grid-template-columns: 1fr;  /* conteúdo empilhado */
+    gap: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .grade--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .rodape__grade {
+    grid-template-columns: 1fr;
+  }
+}

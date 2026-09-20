@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!-- Aurora Café — página fictícia de uma empresa
+     Estrutura: <header> (cabeçalho + menu), <main> (conteúdo principal)
+     e <footer> (rodapé). Semântica e responsiva. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora Café — Cafeteria Artesanal em Recife</title>
+  <meta name="description" content="Café especial, doces artesanais e um espaço acolhedor no coração do Recife. Conheça a Aurora Café." />
+
+  <!-- Fontes: Fraunces (títulos) e Work Sans (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Estilos do site -->
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+
+  <!-- ============================= CABEÇALHO ============================= -->
+  <header class="cabecalho">
+    <div class="container cabecalho__linha">
+
+      <!-- Logotipo -->
+      <a href="#inicio" class="logo">
+        <span class="logo__icone" aria-hidden="true">☕</span>
+        <span class="logo__texto">Aurora Café</span>
+      </a>
+
+      <!-- Menu de navegação (desktop) -->
+      <nav class="menu" aria-label="Navegação principal">
+        <ul class="menu__lista">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#contato" class="botao botao--primario">Faça seu pedido</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botão de hambúrguer: abre/fecha o menu no celular (interação JS) -->
+      <button type="button" class="menu-mobile__botao" id="botaoMenu"
+              aria-expanded="false" aria-controls="menuMobile"
+              aria-label="Abrir menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu mobile: aparece somente quando a classe "aberto" é adicionada -->
+    <nav class="menu-mobile" id="menuMobile" aria-label="Navegação móvel">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========================= CONTEÚDO PRINCIPAL ======================= -->
+  <main>
+
+    <!-- Seção de abertura (hero) -->
+    <section id="inicio" class="hero">
+      <div class="container hero__grade">
+        <div>
+          <p class="etiqueta">Cafeteria artesanal · Recife, PE</p>
+          <h1>O café que começa o seu dia com calma</h1>
+          <p class="hero__texto">
+            Grãos selecionados, torra semanal e receitas de família. Passa na Aurora
+            para um espresso ou fica um pouco mais e aproveita o nosso espaço.
+          </p>
+          <div class="hero__botoes">
+            <a href="#cardapio" class="botao botao--primario">Ver o cardápio</a>
+            <a href="#contato" class="botao botao--contorno">Falar com a gente</a>
+          </div>
+        </div>
+        <img src="img/hero.jpg"
+             alt="Barista preparando café com latte art no balcão da cafeteria"
+             width="1408" height="912" class="hero__imagem" />
+      </div>
+    </section>
+
+    <!-- Seção "Sobre" com três destaques -->
+    <section id="sobre" class="sobre">
+      <div class="container">
+        <h2>Sobre a Aurora</h2>
+        <p class="secao__texto">
+          Nascemos em 2019 numa esquina do Recife Antigo com uma máquina de espresso
+          emprestada. Hoje somos uma equipe de oito pessoas apaixonadas por café —
+          e continua tudo feito à mão.
+        </p>
+
+        <div class="grade grade--3">
+          <article class="cartao">
+            <span class="cartao__icone" aria-hidden="true">🌱</span>
+            <h3>Grãos sustentáveis</h3>
+            <p>Compramos direto de produtores da Alta Mogiana, com torra semanal.</p>
+          </article>
+          <article class="cartao">
+            <span class="cartao__icone" aria-hidden="true">🥐</span>
+            <h3>Feito na casa</h3>
+            <p>Pães, bolos e doces assados todos os dias na nossa cozinha.</p>
+          </article>
+          <article class="cartao">
+            <span class="cartao__icone" aria-hidden="true">🛋️</span>
+            <h3>Espaço pra ficar</h3>
+            <p>Wi-fi rápido, tomadas em toda mesa e um mezanino silencioso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de cardápio -->
+    <section id="cardapio" class="cardapio">
+      <div class="container">
+        <h2>Cardápio</h2>
+        <p class="secao__texto">Os favoritos da casa — servidos o dia inteiro.</p>
+
+        <div class="grade grade--3">
+          <article class="cartao">
+            <div class="cartao__linha">
+              <h3>Espresso Artesanal</h3>
+              <span class="preco">R$ 7</span>
+            </div>
+            <p>Extração precisa com grãos da Alta Mogiana.</p>
+          </article>
+          <article class="cartao">
+            <div class="cartao__linha">
+              <h3>Cappuccino Cremoso</h3>
+              <span class="preco">R$ 12</span>
+            </div>
+            <p>Leite vaporizado e toque de canela.</p>
+          </article>
+          <article class="cartao">
+            <div class="cartao__linha">
+              <h3>Latte Caramelo</h3>
+              <span class="preco">R$ 14</span>
+            </div>
+            <p>Espresso duplo com calda de caramelo da casa.</p>
+          </article>
+          <article class="cartao">
+            <div class="cartao__linha">
+              <h3>Cold Brew 12h</h3>
+              <span class="preco">R$ 15</span>
+            </div>
+            <p>Extração a frio por 12 horas, suave e cítrico.</p>
+          </article>
+          <article class="cartao">
+            <div class="cartao__linha">
+              <h3>Pão de Queijo Artesanal</h3>
+              <span class="preco">R$ 8</span>
+            </div>
+            <p>Receita mineira, direto do forno.</p>
+          </article>
+          <article class="cartao">
+            <div class="cartao__linha">
+              <h3>Bolo de Cenoura</h3>
+              <span class="preco">R$ 10</span>
+            </div>
+            <p>Com ganache de chocolate 70%.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ com sanfona (accordion) — interação controlada pelo JS -->
+    <section id="faq" class="faq">
+      <div class="container faq__coluna">
+        <h2>Dúvidas frequentes</h2>
+
+        <div class="faq__lista">
+          <article class="faq__item aberto">
+            <button type="button" class="faq__pergunta" aria-expanded="true">
+              Vocês fazem encomendas para eventos?
+              <span aria-hidden="true" class="faq__sinal">+</span>
+            </button>
+            <p class="faq__resposta">
+              Sim! Montamos kits de café e doces para aniversários, reuniões e casamentos.
+              Fale conosco pelo formulário com pelo menos 5 dias de antecedência.
+            </p>
+          </article>
+
+          <article class="faq__item">
+            <button type="button" class="faq__pergunta" aria-expanded="false">
+              Há opções sem lactose ou sem glúten?
+              <span aria-hidden="true" class="faq__sinal">+</span>
+            </button>
+            <p class="faq__resposta">
+              Todos os drinks podem ser feitos com leite de aveia, amêndoa ou castanha.
+              Também temos sempre um doce sem glúten no balcão.
+            </p>
+          </article>
+
+          <article class="faq__item">
+            <button type="button" class="faq__pergunta" aria-expanded="false">
+              Posso trabalhar no café? Há wi-fi?
+              <span aria-hidden="true" class="faq__sinal">+</span>
+            </button>
+            <p class="faq__resposta">
+              Claro — temos wi-fi de alta velocidade, tomadas em quase todas as mesas e um
+              mezanino mais silencioso para quem precisa de concentração.
+            </p>
+          </article>
+
+          <article class="faq__item">
+            <button type="button" class="faq__pergunta" aria-expanded="false">
+              Vocês vendem os grãos para levar?
+              <span aria-hidden="true" class="faq__sinal">+</span>
+            </button>
+            <p class="faq__resposta">
+              Vendemos pacotes de 250 g e 500 g dos nossos blends, moídos na hora ou em
+              grãos. Assinatura mensal com 10% de desconto.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de contato com formulário (validação em JavaScript) -->
+    <section id="contato" class="contato">
+      <div class="container contato__grade">
+        <div>
+          <h2>Fale com a gente</h2>
+          <p class="secao__texto">
+            Encomendas, dúvidas ou só um oi — respondemos em até um dia útil.
+          </p>
+          <ul class="contato__lista">
+            <li><span aria-hidden="true">📍</span> Rua das Flores, 123 — Recife Antigo, Recife/PE</li>
+            <li><span aria-hidden="true">🕐</span> Seg a Sex, 7h às 19h · Sáb, 8h às 20h · Dom, 8h às 14h</li>
+            <li><span aria-hidden="true">📞</span> (81) 3000-0000</li>
+          </ul>
+        </div>
+
+        <!-- novalidate: desativa a validação nativa para usarmos a nossa em JS -->
+        <form id="formContato" class="formulario" novalidate>
+          <div class="campo">
+            <label for="nome">Nome *</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" />
+            <p class="campo__erro" id="erroNome" aria-live="polite"></p>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" placeholder="nome@exemplo.com" />
+            <p class="campo__erro" id="erroEmail" aria-live="polite"></p>
+          </div>
+
+          <div class="campo">
+            <label for="telefone">Telefone (opcional)</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(81) 90000-0000" />
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem *</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?"></textarea>
+            <p class="campo__erro" id="erroMensagem" aria-live="polite"></p>
+          </div>
+
+          <button type="submit" class="botao botao--primario botao--largo">Enviar mensagem</button>
+
+          <!-- Mensagem de sucesso: exibida pelo JS quando o formulário é válido -->
+          <p class="formulario__sucesso" id="mensagemSucesso" role="status" hidden>
+            ☕ Mensagem enviada! Obrigado pelo contato, responderemos em breve.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================ RODAPÉ ============================ -->
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div>
+        <p class="rodape__logo">☕ Aurora Café</p>
+        <p class="rodape__texto">
+          Cafeteria artesanal no Recife Antigo. Café especial, doces da casa
+          e um lugar pra ficar.
+        </p>
+      </div>
+
+      <nav aria-label="Links do rodapé">
+        <p class="rodape__titulo">Navegação</p>
+        <ul class="rodape__lista">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p class="rodape__titulo">Contato</p>
+        <ul class="rodape__lista">
+          <li>Rua das Flores, 123 — Recife/PE</li>
+          <li>(81) 3000-0000</li>
+          <li>ola@auroracafe.com.br</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rodape__base">
+      © 2026 Aurora Café — Página fictícia criada para fins de estudo.
+    </div>
+  </footer>
+
+  <!-- Comportamentos da página: menu mobile, sanfona do FAQ e validação -->
+  <script src="js/script.js"></script>
+</body>
+</html>
